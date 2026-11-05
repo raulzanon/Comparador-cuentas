@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mi primera cuenta bancaria - Trabajo</title><style>body{font-family:Arial,sans-serif;color:#182437;background:#fff;max-width:920px;margin:24px auto;padding:0 16px;--viz-text:#182437;--viz-panel:#f1f5f9;--viz-border:#cbd5e1;--viz-card:#fff;--viz-muted:#64748b;--viz-accent:#1264bb} .noprint{display:none!important} textarea{field-sizing:content;min-height:60px} @media print{body{margin:0} .panel{break-inside:avoid}}</style></head><body>
+  <style>
+    body{color:var(--viz-text);font-family:inherit;font-size:14px}
+    body .hero{padding:23px;border-radius:14px;background:var(--viz-panel);border:1px solid var(--viz-border)}
+    body .eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:750;color:var(--viz-muted)}
+    body h2{font-size:22px;font-weight:750;letter-spacing:-.035em;line-height:1.2;margin:7px 0}
+    body h3{font-size:16px;font-weight:750;margin:0 0 10px}
+    body p{line-height:1.55;margin:6px 0}
+    body .muted{color:var(--viz-muted)}
+    body .small{font-size:12px}
+    body .panel{padding:16px;border:1px solid var(--viz-border);border-radius:12px}
+    body .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    body label{font-size:12px;font-weight:650;display:block;margin-bottom:5px}
+    body input,body textarea,body select{color:var(--viz-text);background:var(--viz-card);border:1px solid var(--viz-border);border-radius:7px;padding:9px;width:100%;font:inherit;font-size:13px;outline-offset:2px}
+    body textarea{min-height:62px;resize:vertical;line-height:1.4}
+    body input:focus,body textarea:focus,body select:focus{outline:2px solid var(--viz-accent);border-color:transparent}
+    body .banktable{width:100%;border-collapse:collapse}
+    body .banktable th{text-align:left;font-size:12px;padding:10px 7px;border-bottom:2px solid var(--viz-border);vertical-align:bottom}
+    body .banktable td{vertical-align:top;padding:10px 7px;border-bottom:1px solid var(--viz-border)}
+    body .banktable td:first-child{width:29%;font-size:12px;font-weight:650;line-height:1.45}
+    body .banktable td:nth-child(2),body .banktable td:nth-child(3){width:35.5%}
+    body .banktable textarea{min-height:65px}
+    body .tag{font-size:10px;font-weight:700;border-radius:5px;padding:3px 6px;display:inline-block;background:var(--viz-panel);color:var(--viz-muted);margin-top:5px}
+    body .btn{border-radius:8px;border:1px solid var(--viz-border);padding:10px 13px;cursor:pointer;font-weight:650;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--viz-card);color:var(--viz-text)}
+    body .btn-primary{background:var(--viz-accent);color:white;border-color:var(--viz-accent)}
+    body .btn:hover{filter:brightness(.96)}
+    body .btn:focus-visible{outline:2px solid var(--viz-accent);outline-offset:2px}
+    body .link{color:var(--viz-accent);text-decoration:underline;text-underline-offset:2px}
+    body .steps{display:flex;gap:5px;margin-top:15px}
+    body .step{height:5px;border-radius:5px;background:var(--viz-border);flex:1}
+    body .step.active{background:var(--viz-series-2,var(--viz-accent))}
+    body .notice{border-left:3px solid var(--viz-accent);padding:9px 12px;background:var(--viz-panel);font-size:12px;line-height:1.55;border-radius:0 7px 7px 0}
+    body .inline-check{display:flex;align-items:flex-start;gap:8px;margin:10px 0;font-size:13px}
+    body .inline-check input{width:16px;height:16px;flex-shrink:0;margin-top:2px}
+    body .actions{display:flex;flex-wrap:wrap;gap:8px}
+    body .fieldsp{margin:12px 0}
+    body .banktable input{min-width:0}
+    @media(max-width:550px){body .hero{padding:16px}body .panel{padding:12px}body .banktable th,body .banktable td{padding:7px 3px}body .banktable td:first-child{width:27%;font-size:11px}body .banktable textarea{font-size:12px;padding:6px}body .fields{grid-template-columns:1fr}}
+    @media print{body .noprint{display:none!important}body textarea{min-height:unset;overflow:visible}body .panel{break-inside:avoid}}
+  </style>
+  <div class="hero">
+    <div class="eyebrow">Proyecto de Investigación · 4.º ESO</div>
+    <h2>Mi primera cuenta bancaria</h2>
+    <p class="muted">Investiga, compara y decide. ¿Qué cuenta elegirías para Lucía?</p>
+    <div class="steps"><span class="step active"></span><span class="step active"></span><span class="step active"></span><span class="step active"></span></div>
+    <p class="small muted" style="margin-top:9px">1. Investigar · 2. Comparar · 3. Comprobar · 4. Concluir</p>
+  </div>
+  <section class="panel space-y-3">
+    <h3>Datos del equipo</h3>
+    <div class="fields">
+      <div><label for="team">Nombres de los investigadores</label><input id="team" data-save="" placeholder="Integrantes de la pareja" value=""></div>
+      <div><label for="group">Grupo y fecha</label><input id="group" data-save="" placeholder="4.º ESO · Fecha" value=""></div>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="eyebrow">El reto</div>
+    <h3 style="margin-top:7px">Conoce a Lucía</h3>
+    <p>Lucía tiene <strong>16 años</strong>, recibe 30 € al mes de su familia y ha ahorrado 250 € para un ordenador. Quiere tener una cuenta para guardar su dinero, pagar en comercios y por Internet, recibir transferencias y utilizar Bizum. Sus padres pueden intervenir en la apertura de la cuenta.</p>
+    <p><strong>Tu misión:</strong> comparar dos ofertas bancarias reales y recomendar la más adecuada para Lucía. ¡No te fíes solamente de la publicidad!</p>
+  </section>
+  <section class="panel space-y-3">
+    <div class="eyebrow">Paso 1 · Localiza las fuentes</div>
+    <h3>Investiga las dos ofertas</h3>
+    <div class="fields">
+      <div class="p-3 rounded-lg border space-y-2" style="border-color:var(--viz-border)">
+        <strong>Entidad A · BBVA</strong>
+        <p class="small muted">Cuenta Online para Menores</p>
+        <a class="link small" target="_blank" rel="noopener noreferrer" href="https://www.bbva.es/personas/menores.html">Consultar oferta oficial ↗</a>
+      </div>
+      <div class="p-3 rounded-lg border space-y-2" style="border-color:var(--viz-border)">
+        <strong>Entidad B · CaixaBank</strong>
+        <p class="small muted">Cuenta imaginTeens</p>
+        <a class="link small" target="_blank" rel="noopener noreferrer" href="https://www.caixabank.es/particular/cuentas/cuenta-para-menores.html">Consultar oferta oficial ↗</a>
+      </div>
+    </div>
+    <div class="notice">Consulta la página publicitaria y busca los documentos de condiciones y comisiones. Si no encuentras un dato, escribe «No encontrado». Una oferta no es necesariamente mejor porque destaque que es gratuita.</div>
+  </section>
+  <section class="panel">
+    <div class="eyebrow">Paso 2 · Recoge información</div>
+    <h3 style="margin-top:7px">Tabla comparativa</h3>
+    <p class="small muted">Completa cada casilla usando las fuentes originales. No inventes datos ni copies respuestas de una IA.</p>
+    <div style="overflow-x:auto">
+      <table class="banktable" aria-label="Comparativa de las cuentas bancarias">
+        <thead><tr><th>Aspecto a investigar</th><th>BBVA</th><th>imaginTeens</th></tr></thead>
+        <tbody id="bankRows"><tr><td>Nombre exacto de la cuenta<br><span class="tag">PRIORITARIO</span></td><td><textarea data-save="" id="tA0" aria-label="Nombre exacto de la cuenta, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB0" aria-label="Nombre exacto de la cuenta, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>Edad permitida<br><span class="tag">PRIORITARIO</span></td><td><textarea data-save="" id="tA1" aria-label="Edad permitida, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB1" aria-label="Edad permitida, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>Requisitos de apertura y representante legal<br><span class="tag">PRIORITARIO</span></td><td><textarea data-save="" id="tA2" aria-label="Requisitos de apertura y representante legal, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB2" aria-label="Requisitos de apertura y representante legal, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>Comisión de apertura y mantenimiento<br><span class="tag">PRIORITARIO</span></td><td><textarea data-save="" id="tA3" aria-label="Comisión de apertura y mantenimiento, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB3" aria-label="Comisión de apertura y mantenimiento, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>Tarjeta: tipo y coste<br><span class="tag">PRIORITARIO</span></td><td><textarea data-save="" id="tA4" aria-label="Tarjeta: tipo y coste, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB4" aria-label="Tarjeta: tipo y coste, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>Retirada de efectivo en cajeros<br><span class="tag">PRIORITARIO</span></td><td><textarea data-save="" id="tA5" aria-label="Retirada de efectivo en cajeros, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB5" aria-label="Retirada de efectivo en cajeros, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>Transferencias: disponibilidad y coste</td><td><textarea data-save="" id="tA6" aria-label="Transferencias: disponibilidad y coste, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB6" aria-label="Transferencias: disponibilidad y coste, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>Bizum a los 16 años<br><span class="tag">PRIORITARIO</span></td><td><textarea data-save="" id="tA7" aria-label="Bizum a los 16 años, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB7" aria-label="Bizum a los 16 años, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>App y banca online</td><td><textarea data-save="" id="tA8" aria-label="App y banca online, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB8" aria-label="App y banca online, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr><tr><td>¿Qué ocurre al cumplir 18 años?</td><td><textarea data-save="" id="tA9" aria-label="¿Qué ocurre al cumplir 18 años?, BBVA" placeholder="Escribe el dato o «No encontrado»"></textarea></td><td><textarea data-save="" id="tB9" aria-label="¿Qué ocurre al cumplir 18 años?, imaginTeens" placeholder="Escribe el dato o «No encontrado»"></textarea></td></tr></tbody>
+      </table>
+    </div>
+    <p class="small muted" style="margin-top:9px">En los cajeros, comprueba si depende de la red utilizada. En Bizum, comprueba específicamente su disponibilidad para menores de 16 años.</p>
+  </section>
+  <section class="panel space-y-3">
+    <div class="eyebrow">Paso 3 · Comprueba la publicidad</div>
+    <h3>¿Qué anuncia y qué dice realmente?</h3>
+    <p>Elige <strong>una afirmación publicitaria</strong> de cualquiera de las dos entidades. Comprueba si sus condiciones coinciden con el mensaje y explica lo que descubres.</p>
+    <div class="fieldsp"><label for="adbank">Entidad cuya publicidad vas a analizar</label><select data-save="" id="adbank"><option value="" selected="">Selecciona</option><option>BBVA</option><option>CaixaBank / imagin</option></select></div>
+    <div class="fieldsp"><label for="adclaim">¿Qué promete la publicidad? (Anota la frase)</label><textarea data-save="" id="adclaim" placeholder="Por ejemplo: Cuenta sin comisiones..."></textarea></div>
+    <div class="fieldsp"><label for="adverify">¿Qué has comprobado en las condiciones? ¿Hay límites o excepciones?</label><textarea data-save="" id="adverify" placeholder="En el documento hemos encontrado..."></textarea></div>
+    <div class="fieldsp" data-app-block-stream-enter=""><label for="adevidence">¿En qué documento o apartado lo has comprobado?</label><input data-save="" id="adevidence" placeholder="Nombre del documento, página o apartado" value=""></div>
+  </section>
+  <section class="panel space-y-3" data-app-block-stream-enter="">
+    <div class="eyebrow">Herramienta de apoyo</div>
+    <h3>Utiliza la IA para comprender, no para copiar</h3>
+    <p>Puedes consultar a una IA cuando una cláusula o expresión contractual te resulte difícil. Después, <strong>vuelve al documento y comprueba</strong> si su explicación es correcta.</p>
+    <div class="notice" id="aiPrompt">«Soy estudiante de 4.º de ESO. Explícame esta cláusula bancaria con palabras sencillas y pon un ejemplo para una persona de 16 años. Indica qué no se puede deducir del texto. No inventes información: [pega aquí la cláusula]»</div>
+    
+    <div class="fieldsp"><label for="aiClause">¿Qué palabra o cláusula has consultado?</label><textarea data-save="" id="aiClause" placeholder="Copia un fragmento breve de las condiciones públicas..."></textarea></div>
+    <div class="fieldsp"><label for="aiLearn">¿Qué has entendido y cómo has comprobado la explicación?</label><textarea data-save="" id="aiLearn" placeholder="La IA me ha explicado que... Lo he comprobado en..."></textarea></div>
+    <label class="inline-check"><input type="checkbox" data-save="" id="aiCheck"><span>He comprobado la información en documentos originales, y no he utilizado la IA para completar ni decidir por mí.</span></label>
+    <p class="small muted" data-app-block-stream-enter="">No introduzcas información personal ni documentos bancarios privados en una IA.</p>
+  </section>
+  <section class="panel space-y-3" data-app-block-stream-enter="">
+    <div class="eyebrow">Paso 4 · Conclusión</div>
+    <h3>¿Qué cuenta elegirías para Lucía?</h3>
+    <div data-app-block-stream-enter=""><label for="choice">Tu recomendación</label><select id="choice" data-save=""><option value="" selected="">Selecciona una opción</option><option>BBVA</option><option>imaginTeens</option><option>No tenemos pruebas suficientes para decidir</option></select></div>
+    <div data-app-block-stream-enter=""><label for="reason1">Razón 1 · Costes y comisiones</label><textarea id="reason1" data-save="" placeholder="La primera razón es..."></textarea></div>
+    <div data-app-block-stream-enter=""><label for="reason2">Razón 2 · Servicios que necesita Lucía</label><textarea id="reason2" data-save="" placeholder="La segunda razón es..."></textarea></div>
+    <div data-app-block-stream-enter=""><label for="reason3">Razón 3 · Condiciones, límites o ventajas</label><textarea id="reason3" data-save="" placeholder="La tercera razón es..."></textarea></div>
+    <div data-app-block-stream-enter=""><label for="uncertain">¿Qué dato no has conseguido verificar o qué duda mantienes?</label><textarea id="uncertain" data-save=""></textarea></div>
+  </section>
+  <section class="panel space-y-3" data-app-block-stream-enter="">
+    <div class="eyebrow">Fuentes de la investigación</div>
+    <h3>Registra tus documentos</h3>
+    <p class="small muted">Identifica las páginas y documentos originales utilizados. Pega sus enlaces.</p>
+    <div><label for="srcBBVA">Fuentes de BBVA</label><textarea id="srcBBVA" data-save="" placeholder="Página oficial, condiciones, documento informativo de comisiones y enlaces..."></textarea></div>
+    <div><label for="srcImagin">Fuentes de CaixaBank / imagin</label><textarea id="srcImagin" data-save="" placeholder="Página oficial, condiciones, documento informativo de comisiones y enlaces..."></textarea></div>
+    <div><label for="srcOther">Fuente independiente consultada (opcional)</label><textarea id="srcOther" data-save="" placeholder="Por ejemplo, Banco de España..."></textarea></div>
+  </section>
+  <section class="panel space-y-3" data-app-block-stream-enter="">
+    <h3>Entrega de la investigación</h3>
+    <p class="small muted">Exporta tu trabajo en HTML para conservar tus respuestas o imprimirlo como PDF. Antes de cerrar la página, guarda una copia: la conservación automática depende del navegador y puede no estar disponible.</p>
+    
+    <p id="status" role="status" class="small muted" aria-live="polite"></p>
+  </section>
+  
+</body></html>
